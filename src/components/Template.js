@@ -1,39 +1,35 @@
 // src/components/Template.js
 
-import React, { useState } from 'react';
+import React from 'react';
+import { useNavigate } from 'react-router-dom'; // Importar useNavigate
 import './Template.css'; // Importar el archivo CSS
 
 const Template = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
+  const navigate = useNavigate(); // Usar useNavigate
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert(`Gracias por registrarte, ${name}!`);
+  const handleNavigation = (path) => {
+    navigate(path); // Cambiar a navigate
   };
 
   return (
     <div className="template-container">
       <h1 className="welcome-text">Bienvenido a Nuestro Gimnasio</h1>
       <p>¡Únete a nosotros y transforma tu vida!</p>
-      
-      <form onSubmit={handleSubmit} className="registration-form">
-        <input 
-          type="text" 
-          placeholder="Tu nombre" 
-          value={name} 
-          onChange={(e) => setName(e.target.value)} 
-          required 
-        />
-        <input 
-          type="email" 
-          placeholder="Tu correo electrónico" 
-          value={email} 
-          onChange={(e) => setEmail(e.target.value)} 
-          required 
-        />
-        <button type="submit" className="cta-button">¡Comienza Ahora!</button>
-      </form>
+
+      <div className="navigation-container">
+        <div className="navigation-box" onClick={() => handleNavigation('/users')}>
+          <h2>Usuarios</h2>
+          <p>Gestiona los usuarios de nuestro gimnasio.</p>
+        </div>
+        <div className="navigation-box" onClick={() => handleNavigation('/orders')}>
+          <h2>Órdenes</h2>
+          <p>Revisa y gestiona las órdenes de los usuarios.</p>
+        </div>
+        <div className="navigation-box" onClick={() => handleNavigation('/memberships')}>
+          <h2>Membresías</h2>
+          <p>Administra las diferentes membresías disponibles.</p>
+        </div>
+      </div>
 
       <h2>Beneficios de unirte a nosotros:</h2>
       <ul className="benefits-list">

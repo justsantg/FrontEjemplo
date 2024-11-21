@@ -1,83 +1,42 @@
 /* src/components/Template.css */
 
 .template-container {
+  padding: 20px;
   text-align: center;
-  padding: 50px;
-  background-image: url('https://example.com/background.jpg'); /* Cambia esto a una URL válida */
-  background-size: cover;
-  background-position: center;
-  color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  background-color: #191616;
 }
 
 .welcome-text {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-  animation: fadeIn 1s ease-in-out;
+  font-size: 28px;
+  margin-bottom: 10px;
 }
 
-.registration-form {
-  margin: 20px auto;
+.navigation-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
 }
 
-.registration-form input {
-  margin: 10px 0;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  width: 80%;
-}
-
-.cta-button {
-  background-color: #1e5022;
+.navigation-box {
+  background-color: #007bff;
   color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+  width: 200px;
   cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s;
 }
 
-.cta-button:hover {
-  background-color: #f06292;
+.navigation-box:hover {
+  background-color: #0056b3;
 }
 
 .benefits-list {
   list-style-type: none;
   padding: 0;
-  margin-top: 20px;
 }
 
 .benefits-list li {
-  background-color: rgba(255, 255, 255, 0.2);
   margin: 10px 0;
-  padding: 10px;
-  border-radius: 5px;
-  animation: slideIn 0.5s ease-in-out;
-}
-
-/* Animaciones */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slideIn {
-  from {
-    transform: translateY(-20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
 }
