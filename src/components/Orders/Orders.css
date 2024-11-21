@@ -1,0 +1,32 @@
+/* src/components/Orders/Orders.css */
+
+.orders-container {
+    padding: 20px;
+    background-color: #ffffff1a;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .orders-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ffffff;
+  }
+  
+  .orders-list {
+    list-style-type: none;
+    color: #ffffff;
+    padding: 0;
+  }
+  
+  .order-item {
+    background-color: #ffffff33;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .order-item strong {
+    color: #ff0000;
+  }
